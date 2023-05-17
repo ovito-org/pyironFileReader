@@ -1,0 +1,28 @@
+[build-system]
+requires = ["setuptools"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "[[FileReaderName]]"
+version = "[[Version number]]"
+description = "[[Short description]]"
+keywords = ["ovito", "python-file-reader"]
+authors = [{name = "[[Author 1 name]]", email = "[[Author 1 email]]"}, {name = "[[Author 2 name]]", email = "[[Author 2 email]]"}]
+maintainers = [{name = "[[Maintainer 1 name]]", email = "[[Maintainer 1 email]]"}, {name = "[[Maintainer 2 name]]", email = "[[Maintainer 2 email]]"}]
+license = {text = "[[License]]"}
+readme = "README.md"
+requires-python = "[[>=3.7]]"
+dependencies = [
+    "ovito >= [[VersionNumber]]", # OVITO must be >=3.9!
+    # "[[dependency1]]",
+    # "[[dependency2 == Version]]",
+]
+
+[project.urls]
+repository = "[[Repository Link]]"
+
+[project.entry-points.'OVITO.FileReader']
+"[[Human readable file reader name]]" = "[[FileReaderName]]:[[FileReaderName]]"
+
+[tool.setuptools.packages.find]
+where = ["src"]
