@@ -9,11 +9,11 @@ The following table gives an overview over all *particle properties* and *attrib
 **Particle properties**
 | pyiron name | OVITO name | Components | Optional |
 | --- | --- | :---: | :---: |
-| `generic/indices` | `Particle Type` | `1` | |
-| `generic/unwrapped_positions` | `Position` | `3` | `x*` |
-| `generic/positions` | `Position` | `3` | `x*`|
-| `generic/forces` | `Force` | `3` | `x` |
-| `generic/velocities` | `Velocity` | `3` | `x` |
+| `generic/indices` | `Particle Type` | 1 | |
+| `generic/unwrapped_positions` | `Position` | 3 | x* |
+| `generic/positions` | `Position` | 3 | x*|
+| `generic/forces` | `Force` | 3 | x |
+| `generic/velocities` | `Velocity` | 3 | x |
 
 `*` One of `generic/unwrapped_positions` or `generic/positions` is required.
 
@@ -22,8 +22,8 @@ The following table gives an overview over all *particle properties* and *attrib
 | --- | --- | :---: | :---: |
 | `generic/steps` | `Timestep` | 1 | |
 | `generic/natoms` | `Number of atoms` | 1 | |
-| `generic/temperature` | `Temperature` | 1 | `x` |
-| `generic/energy_tot` | `Total energy` | 1 | `x` |
+| `generic/temperature` | `Temperature` | 1 | x |
+| `generic/energy_tot` | `Total energy` | 1 | x |
 
 The file reader can be installed either into *OVITO Pro* or the [*OVITO* Python module](https://pypi.org/project/ovito/) Python module using *pip*.
 
