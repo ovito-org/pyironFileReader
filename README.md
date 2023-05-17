@@ -3,7 +3,7 @@
 
 ## Description
 Python file reader for *OVITO* that reads structural data from the hdf5 containers written by [*pyiron*](https://pyiron.org/). After installation, *OVITO* will auto-detect *pyiron* files and open them for analysis and visualization. 
-Note, that the *"status"* of the pyiron job needs to be *"finished"* before its file can be read.
+Note that the *"status"* of the pyiron job needs to be *"finished"* before its file can be read.
 The following table gives an overview over all *particle properties* and *attributes* currently understood by this parser. Optional properties will be skipped if they are not included in the file **and** the parser is not in strict mode.
 
 **Particle properties**
