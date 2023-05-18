@@ -32,7 +32,7 @@ The file reader can be installed either into *OVITO Pro* or the [*OVITO* Python 
 - `strict` / "Strict mode": Activate strict mode which requires all optional keys to be present in the pyiron data container. In strict mode, any missing key will raise a `KeyError`. The default (non-strict) mode silently skips all missing optional keys.
 
 ## Example
-1. [Example 01](Examples/example_01.py) loads the [`lmp.h5` structure file](Examples/lmp.h5) and prints all *particle properties* and *attributes* found therein.
+1. [Example 01](Examples/example_01.py) loads the [`lmp.h5` structure file](Examples/example_01/lmp.h5) and prints all *particle properties* and *attributes* found therein.
 
 The following image shows the same file in the *OVITO PRO* desktop application.
 ![Example 01](Examples/example_01.png)
