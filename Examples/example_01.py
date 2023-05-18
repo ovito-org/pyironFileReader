@@ -1,8 +1,9 @@
 from ovito.io import import_file
+from pathlib import Path
 
 
 def main():
-    pipeline = import_file("lmp.h5")
+    pipeline = import_file(Path("example_01", "lmp.h5"))
     data = pipeline.compute()
 
     print("Particle properties:")
