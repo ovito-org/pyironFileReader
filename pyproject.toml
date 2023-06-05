@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "pyironFileReader"
-version = "2023.0"
+version = "2023.1"
 description = "OVITO Python file reader for the h5 data containers written by pyiron."
 keywords = ["ovito", "python-file-reader"]
 authors = [{name = "Daniel Utt", email = "utt@ovito.org"}]

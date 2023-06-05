@@ -98,7 +98,7 @@ class PyironFileReader(FileReaderInterface):
 
             # Cell
             cellMatrix = np.zeros((3, 4))
-            cellMatrix[:3, :3] = f[key]["output/generic/cells"][localIdx]
+            cellMatrix[:3, :3] = np.transpose(f[key]["output/generic/cells"][localIdx])
             if self.roundCell:
                 for idx in ((0, 1), (0, 2), (1, 0), (1, 2), (2, 0), (2, 1)):
                     cellMatrix[idx] = (
