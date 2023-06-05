@@ -44,25 +44,15 @@ class PyironFileReader(FileReaderInterface):
             for k in f.keys():
                 for i in range(len(f[k]["output/generic/natoms"])):
                     register_frame(
-                        parser_data=i,
+                        frame_info=(k, i),
                         label=f"{k}: {f[k]['output/generic/steps'][i]}",
                     )
 
     def parse(
-        self, data: DataCollection, filename: str, parser_data: tuple, **kwargs: Any
+        self, data: DataCollection, filename: str, frame_info: tuple, **kwargs: Any
     ):
         with h5py.File(filename, "r") as f:
-            # Map from global frame index (parser_data) to local run in the h5 file
-            keys = list(f.keys())
-            if len(keys) > 1:
-                total = [len(f[key]["output/generic/natoms"]) for key in keys]
-                total = np.cumsum(total)
-                keyIdx = np.argmin(total <= parser_data)
-                key = keys[keyIdx]
-                localIdx = parser_data - total[keyIdx - 1]
-            else:
-                key = keys[0]
-                localIdx = parser_data
+            key, localIdx = frame_info
 
             # Create particles
             particles = data.create_particles(
