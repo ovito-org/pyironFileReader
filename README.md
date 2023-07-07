@@ -43,11 +43,11 @@ The example data was generated using the [`generate_example_data_01.py`](Example
 ## Installation
 - OVITO PRO built-in Python interpreter
 ```
-ovitos -m pip install --user https://github.com/nnn911/pyironFileReader/main/archive.zip
+ovitos -m pip install --user git+https://github.com/nnn911/pyironFileReader.git
 ``` 
 - Standalone Python package or Conda environment
 ```
-pip install --user https://github.com/nnn911/pyironFileReader/main/archive.zip
+pip install --user git+https://github.com/nnn911/pyironFileReader.git
 ```
 - Please note that the `--user` tag is recommended but optional and depends on your Python installation.
 
