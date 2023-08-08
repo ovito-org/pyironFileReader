@@ -13,7 +13,7 @@ license = {text = "MIT License"}
 readme = "README.md"
 requires-python = ">=3.7"
 dependencies = [
-    "ovito >= 3.9.0",
+    "ovito >= 3.9.1",
     "numpy",
     "h5py"
 ]
