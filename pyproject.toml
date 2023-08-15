@@ -16,6 +16,10 @@ dependencies = [
     "ovito >= 3.9.1",
     "h5py"
 ]
+classifiers = [
+    "Operating System :: MacOS",
+    "Operating System :: POSIX :: Linux",
+]
 
 [project.urls]
 repository = "https://github.com/nnn911/pyironFileReader"
