@@ -57,6 +57,7 @@ The example data was generated using the [`generate_example_data_01.py`](Example
 - Depends on:
     - `numpy` 
     - `h5py`
+- Please note, this file reader does currently **NOT** work on windows.
 
 ## Adding new properties or attributes
 New optional *particle properties* and *attributes* can be included in the parser quite easily. To add new particle properties, include them in the `particle_props_dict` of the `PyironFileReader` class, which can be found [here](src/pyironFileReader/__init__.py). Similarly, new attributes need to be added to the `attributes_dict`. Both dictionaries map `pyiron names` to `OVITO names`. If you add new properties consider contacting the author or submitting a pull request to make these changes available to the whole community.
