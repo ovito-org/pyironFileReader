@@ -4,17 +4,16 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "pyironFileReader"
-version = "2023.1"
+version = "2023.2"
 description = "OVITO Python file reader for the h5 data containers written by pyiron."
 keywords = ["ovito", "python-file-reader"]
 authors = [{name = "Daniel Utt", email = "utt@ovito.org"}]
 maintainers = [{name = "Daniel Utt", email = "utt@ovito.org"}]
-license = {text = "MIT License"}
+license = {text = "MIT"}
 readme = "README.md"
 requires-python = ">=3.7"
 dependencies = [
     "ovito >= 3.9.1",
-    "numpy",
     "h5py"
 ]
 
@@ -26,3 +25,10 @@ repository = "https://github.com/nnn911/pyironFileReader"
 
 [tool.setuptools.packages.find]
 where = ["src"]
+
+[tool.pytest.ini_options]
+filterwarnings = [
+    "error",
+    "ignore:module 'sre_parse' is deprecated:DeprecationWarning",
+    "ignore:module 'sre_constants' is deprecated:DeprecationWarning",
+]
