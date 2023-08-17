@@ -35,7 +35,7 @@ The file reader can be installed either into OVITO Pro or the [OVITO Python modu
 1. [Example 01](Examples/example_01.py) loads the [`lmp.h5` structure file](Examples/example_01/lmp.h5) and prints all *particle properties* and *attributes* found therein.
 
 The following image shows the same file in the OVITO Pro desktop application.
-![Example 01](Examples/example_01.png)
+![Example 01](examples/example_01.png)
 
 ### Example data generation
 The example data was generated using the [`generate_example_data_01.py`](Examples/generate_example_data_01.py) script using `pyiron`. For more information visit their [website](https://pyiron.org/).
