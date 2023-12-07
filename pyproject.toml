@@ -22,7 +22,7 @@ classifiers = [
 ]
 
 [project.urls]
-repository = "https://github.com/nnn911/pyironFileReader"
+repository = "https://github.com/ovito-org/pyironFileReader"
 
 [project.entry-points.'OVITO.FileReader']
 "pyiron File Reader" = "pyironFileReader:PyironFileReader"
