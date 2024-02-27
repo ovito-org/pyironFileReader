@@ -60,9 +60,18 @@ class PyironFileReader(FileReaderInterface):
             )
             # Particle type
             typeProperty = particles.create_property("Particle Type")
-            typeList = eval(
-                "".join([chr(item) for item in f[key]["output/structure/species"][:]])
-            )
+            try:
+                typeList = eval(
+                    "".join(
+                        [chr(item) for item in f[key]["output/structure/species"][:]]
+                    )
+                )
+            except KeyError:
+                typeList = eval(
+                    "".join(
+                        [chr(item) for item in f[key]["input/structure/species"][:]]
+                    )
+                )
             uTypesH5 = np.unique(f[key]["output/generic/indices"][localIdx])
             uTypesOvito = np.zeros(uTypesH5[-1] + 1, dtype=int)
             for u in uTypesH5:
@@ -104,7 +113,10 @@ class PyironFileReader(FileReaderInterface):
                     cellMatrix[idx] = (
                         0 if cellMatrix[idx] <= self.roundCellBy else cellMatrix[idx]
                     )
-            data.create_cell(cellMatrix, pbc=f[key]["output/structure/cell/pbc"][:])
+            try:
+                data.create_cell(cellMatrix, pbc=f[key]["output/structure/cell/pbc"][:])
+            except KeyError:
+                data.create_cell(cellMatrix, pbc=f[key]["input/structure/cell/pbc"][:])
 
             # Attributes
             for h5Key, ovitoKey in self.attributes_dict.items():
