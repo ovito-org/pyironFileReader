@@ -28,8 +28,6 @@ The following table gives an overview over all *particle properties* and *attrib
 The file reader can be installed either into OVITO Pro or the [OVITO Python module](https://pypi.org/project/ovito/) Python module using *pip*.
 
 ## Parameters
-- `roundCell` / "Round cell to orthogonal": Round the off-diagonal components of the simulation cell to `0` if they are below a threshold value currently hard-coded to `1e-8` A.
-- `strict` / "Strict mode": Activate strict mode which requires all optional keys to be present in the pyiron data container. In strict mode, any missing key will raise a `KeyError`. The default (non-strict) mode silently skips all missing optional keys.
 
 | GUI name                     | Python name | Description                                                                                                                                                                                                                        | Default Value |
 |------------------------------|-------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|---------------|
