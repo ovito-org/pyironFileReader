@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "pyironFileReader"
-version = "2024.1"
+version = "2025.0"
 description = "OVITO Python file reader for the h5 data containers written by pyiron."
 keywords = ["ovito", "ovito-extension"]
 authors = [{name = "Daniel Utt", email = "utt@ovito.org"}]
@@ -15,10 +15,6 @@ requires-python = ">=3.7"
 dependencies = [
     "ovito >= 3.9.1",
     "h5py"
-]
-classifiers = [
-    "Operating System :: MacOS",
-    "Operating System :: POSIX :: Linux",
 ]
 
 [project.urls]
